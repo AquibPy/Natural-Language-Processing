@@ -51,10 +51,11 @@ for i in range(len(sentences)):
 model = Word2Vec(sentences, min_count=1)
 
 
-words = model.wv.vocab
+words = model.wv.index_to_key
 
 # Finding Word Vectors
 vector = model.wv['war']
 
 # Most similar words
 similar = model.wv.most_similar('vikram')
+print(similar)
